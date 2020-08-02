@@ -1,6 +1,7 @@
 import { Center, Grid } from '@chakra-ui/core';
 import React from 'react';
 import DragBox from './DragBox/DragBox';
+import Parallax from './Parallax/Parallax';
 import PullRelease from './PullRelease/PullRelease';
 
 export default {
@@ -38,5 +39,11 @@ export const dragBoxes = () => {
 export const pullRelease = () => (
     <Center minH="100vh">
         <PullRelease />
+    </Center>
+);
+
+export const parallax = () => (
+    <Center minH="100vh">
+        <Parallax />
     </Center>
 );
