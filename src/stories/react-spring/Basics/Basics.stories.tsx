@@ -5,6 +5,7 @@ import InnerText from './InnerText/InnerText';
 import KeyFrames from './KeyFrames/KeyFrames';
 import Scroll from './Scroll/Scroll';
 import SVG from './SVG/SVG';
+import { animated } from 'react-spring';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
