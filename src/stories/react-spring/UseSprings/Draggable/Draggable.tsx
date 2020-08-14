@@ -22,7 +22,6 @@ export default function Draggable({ items }) {
                 )
             );
             const newOrder = arrayMove(order.current, currIndex, currRow);
-            console.log({ activeElementIndex, currIndex, currRow }, newOrder);
             set((index) => {
                 const isActive = down && index === activeElementIndex;
                 return {
