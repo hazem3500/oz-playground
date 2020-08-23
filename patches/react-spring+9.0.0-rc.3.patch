@@ -1,0 +1,43 @@
+diff --git a/node_modules/react-spring/package.json b/node_modules/react-spring/package.json
+index 72c47a8..0daea69 100644
+--- a/node_modules/react-spring/package.json
++++ b/node_modules/react-spring/package.json
+@@ -1,26 +1,29 @@
+ {
+-  "_from": "https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz",
++  "_from": "react-spring@^9.0.0-rc.3",
+   "_id": "react-spring@9.0.0-rc.3",
+   "_inBundle": false,
+   "_integrity": "sha512-VX5Gi6svgRzjGvJ7qVRQBhFN+O2IuPvkSWepIg838LNIMqlc42xdIYtoGJYSqYjNO3IocSfkHlh49WVw6hHMUg==",
+   "_location": "/react-spring",
+-  "_phantomChildren": {},
++  "_phantomChildren": {
++    "regenerator-runtime": "0.13.7"
++  },
+   "_requested": {
+-    "type": "remote",
+-    "raw": "react-spring@https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz",
++    "type": "range",
++    "registry": true,
++    "raw": "react-spring@^9.0.0-rc.3",
+     "name": "react-spring",
+     "escapedName": "react-spring",
+-    "rawSpec": "https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz",
+-    "saveSpec": "https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz",
+-    "fetchSpec": "https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz"
++    "rawSpec": "^9.0.0-rc.3",
++    "saveSpec": null,
++    "fetchSpec": "^9.0.0-rc.3"
+   },
+   "_requiredBy": [
+     "/"
+   ],
+   "_resolved": "https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz",
+   "_shasum": "0ad7b1e803f4385b7cbb44fff6d26f5be78884d6",
+-  "_spec": "react-spring@https://registry.npmjs.org/react-spring/-/react-spring-9.0.0-rc.3.tgz",
+-  "_where": "C:\\Users\\hazem\\AppData\\Local\\Temp\\tmp-18568nnwYxV8iPlxo",
++  "_spec": "react-spring@^9.0.0-rc.3",
++  "_where": "D:\\Code-Space\\Projects\\playground",
+   "author": {
+     "name": "Paul Henschel"
+   },
