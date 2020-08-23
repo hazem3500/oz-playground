@@ -9,5 +9,8 @@ export default {
 export const skeleton = () => <Skeleton />;
 export const ballTrail = (args) => <BallTrail {...args} />;
 ballTrail.args = {
-    count: 25,
+    count: 5,
+};
+ballTrail.argTypes = {
+    count: { control: { type: 'number', min: 1, max: 50 } },
 };
