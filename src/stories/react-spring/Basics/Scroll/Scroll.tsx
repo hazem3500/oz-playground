@@ -8,8 +8,6 @@ export default function Scroll() {
         scroll: 0,
     }));
 
-    console.log(config);
-
     useEffect(() => {
         setScroll({
             from: { scroll: 0 },
@@ -32,78 +30,318 @@ export default function Scroll() {
             ref={containerRef}
             style={{ maxHeight: '400px', overflowY: 'scroll' }}
         >
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="yellow"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="red"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="green"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="blue"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="purple"></Box>
-            <Box flexShrink={0} height="100px" width="100%" bg="orange"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="yellow.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="red.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="green.400"
+            ></Box>
+            <Box flexShrink={0} height="100px" width="100%" bg="blue.400"></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="purple.400"
+            ></Box>
+            <Box
+                flexShrink={0}
+                height="100px"
+                width="100%"
+                bg="orange.400"
+            ></Box>
         </animated.div>
     );
 }

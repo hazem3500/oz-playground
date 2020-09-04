@@ -12,7 +12,7 @@ export const basic = () => (
             animate={{ scale: 2 }}
             height="100px"
             width="100px"
-            bg="cornflowerblue"
+            bg="dodgerblue"
             borderRadius="25px"
         ></MotionBox>
     </Center>
@@ -27,12 +27,12 @@ export const keyFrames = () => (
                 borderRadius: ['50%', '25px'],
                 x: [0, -150, 0, 150, 0, 0],
                 y: [-150, 0, 150, 0, -150, 0],
-                backgroundColor: ['#FFBC42', '#34F6F2', '#6495ed'],
+                backgroundColor: ['#FFBC42', '#34F6F2', '#1e90ff'],
             }}
             transition={{ duration: 1 }}
             height="100px"
             width="100px"
-            bg="cornflowerblue"
+            bg="dodgerblue"
             borderRadius="25px"
         ></MotionBox>
     </Center>
