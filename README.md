@@ -3,4 +3,4 @@ this is my personal playground, I test out libraries that I like or ideas that I
 I am using storybook so you can view all the stories there.
 currently all stories are written using **React** but in the future I am planning on integrating other libraries/frameworks such as **Svelte** or **Vue**.
 
-**Storybook:** [Open from here](https://5f266151ddb76a002213a724-znqjytjbhd.chromatic.com/)
+**Storybook:** [Open from here](https://oz-playground.netlify.app/)
