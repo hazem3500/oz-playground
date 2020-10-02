@@ -4,7 +4,7 @@ import { animated, useSpring } from 'react-spring';
 
 export default function CardFlip({
     foreground = 'cornflowerblue',
-    background = 'red',
+    background = 'red.500',
 }) {
     const [flipped, setFlipped] = useState(false);
     const { opacity, transform } = useSpring({
