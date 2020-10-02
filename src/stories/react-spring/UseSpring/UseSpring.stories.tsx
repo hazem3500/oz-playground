@@ -21,7 +21,7 @@ export const cardsFlip = () => {
                 <CardFlip
                     key={i}
                     foreground={'cornflowerblue'}
-                    background={'red'}
+                    background={'red.500'}
                 />
             ))}
         </Box>
