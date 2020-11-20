@@ -1,6 +1,7 @@
 import { Center, keyframes } from '@chakra-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
+import StyledMotionBox from '../../../components/StyledMotionBox/StyledMotionBox';
 
 export default {
     title: 'framer-motion/basics',
@@ -13,15 +14,7 @@ export default {
     ],
 };
 
-const template = (args) => (
-    <MotionBox
-        height="100px"
-        width="100px"
-        bg="dodgerblue"
-        borderRadius="25px"
-        {...args}
-    ></MotionBox>
-);
+const template = (args) => <StyledMotionBox {...args} />;
 
 export const basic = template.bind({});
 basic.args = {
@@ -43,4 +36,57 @@ keyFrames.args = {
     transition: {
         duration: 1,
     },
+};
+
+export const Variants = () => {
+    const [active, setActive] = useState(false);
+    return (
+        <StyledMotionBox
+            animate={active ? 'active' : 'inactive'}
+            onClick={() => setActive(!active)}
+            variants={{
+                inactive: {
+                    scale: 0.7,
+                    rotate: 0,
+                    backgroundColor: '#1e90ff',
+                    transition: {
+                        staggerChildren: 0.05,
+                    },
+                },
+                active: {
+                    scale: 2,
+                    rotate: 25,
+                    backgroundColor: '#471eff',
+                    transition: {
+                        staggerChildren: 0.1,
+                    },
+                },
+            }}
+            textAlign="center"
+            color="white"
+            userSelect="none"
+        >
+            <MotionBox as="h1">
+                {'HEY!'.split('').map((letter, i) => (
+                    <MotionBox
+                        display="inline-block"
+                        variants={{
+                            inactive: {
+                                rotate: 0,
+                                scale: 1,
+                                textShadow: 'none',
+                            },
+                            active: {
+                                rotate: 10,
+                                scale: letter === '!' ? 1.6 : 1.1,
+                                textShadow: '2px 2px #ff0000',
+                            },
+                        }}
+                    >
+                        {letter}
+                    </MotionBox>
+                ))}
+            </MotionBox>
+        </StyledMotionBox>
+    );
 };
