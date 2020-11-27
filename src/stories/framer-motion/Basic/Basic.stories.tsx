@@ -1,7 +1,8 @@
-import { Center, keyframes } from '@chakra-ui/core';
+import { Center, Button, Box, Stack, HStack, Heading } from '@chakra-ui/core';
 import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 import StyledMotionBox from '../../../components/StyledMotionBox/StyledMotionBox';
+import { useAnimation } from 'framer-motion';
 
 export default {
     title: 'framer-motion/basics',
@@ -42,6 +43,7 @@ export const Variants = () => {
     const [active, setActive] = useState(false);
     return (
         <StyledMotionBox
+            initial="inactive"
             animate={active ? 'active' : 'inactive'}
             onClick={() => setActive(!active)}
             variants={{
@@ -65,10 +67,15 @@ export const Variants = () => {
             textAlign="center"
             color="white"
             userSelect="none"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
         >
-            <MotionBox as="h1">
+            <Heading>
                 {'HEY!'.split('').map((letter, i) => (
                     <MotionBox
+                        as="span"
+                        verticalAlign="text-top"
                         display="inline-block"
                         variants={{
                             inactive: {
@@ -86,7 +93,68 @@ export const Variants = () => {
                         {letter}
                     </MotionBox>
                 ))}
-            </MotionBox>
+            </Heading>
         </StyledMotionBox>
+    );
+};
+
+export const ControlledAnimation = () => {
+    const controls = useAnimation();
+
+    const variants = {
+        tiny: {
+            scale: 0.5,
+            rotate: -215,
+            borderRadius: '50%',
+            backgroundColor: '#D53F8C',
+            x: -200,
+        },
+        normal: {
+            scale: 1,
+            rotate: 0,
+            borderRadius: '25px',
+            backgroundColor: '#1e90ff',
+            x: 0,
+        },
+        bold: {
+            scale: 1.5,
+            rotate: 215,
+            borderRadius: '25px',
+            backgroundColor: '#805AD5',
+            x: 200,
+        },
+    };
+
+    return (
+        <Stack align="center" spacing={16}>
+            <StyledMotionBox
+                initial="normal"
+                variants={variants}
+                animate={controls}
+            />
+            <HStack>
+                <Button
+                    size="lg"
+                    colorScheme="pink"
+                    onClick={() => controls.start('tiny')}
+                >
+                    Tiny
+                </Button>
+                <Button
+                    size="lg"
+                    colorScheme="blue"
+                    onClick={() => controls.start('normal')}
+                >
+                    Normal
+                </Button>
+                <Button
+                    size="lg"
+                    colorScheme="purple"
+                    onClick={() => controls.start('bold')}
+                >
+                    Bold
+                </Button>
+            </HStack>
+        </Stack>
     );
 };

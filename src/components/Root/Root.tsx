@@ -3,5 +3,9 @@ import React from 'react';
 import theme from '../../theme';
 
 export default function Root({ children }) {
-    return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
+    return (
+        <ChakraProvider theme={theme} resetCSS>
+            {children}
+        </ChakraProvider>
+    );
 }
