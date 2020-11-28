@@ -40,12 +40,16 @@ export const flex = () => {
         <Stack spacing={16}>
             <Flex
                 justify={currJustifyValue}
-                border="4px solid"
-                borderColor="blue.200"
+                border="4px dashed"
+                borderColor="blue.50"
                 borderRadius="25px"
             >
                 {new Array(3).fill(null).map((_, i) => (
-                    <StyledMotionBox key={i} layout />
+                    <StyledMotionBox
+                        key={i}
+                        layout
+                        bg={['blue.200', 'blue.400', 'blue.600'][i]}
+                    />
                 ))}
             </Flex>
             <HStack>
