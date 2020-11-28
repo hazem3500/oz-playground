@@ -12,6 +12,7 @@ import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 import StyledMotionBox from '../../../components/StyledMotionBox/StyledMotionBox';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { shuffle } from 'lodash';
 
 export default {
     title: 'framer-motion/layout',
@@ -105,6 +106,30 @@ export const grid = () => {
                     Add +
                 </Button>
             </HStack>
+        </Stack>
+    );
+};
+
+export const list = () => {
+    const [items, setItems] = useState([
+        { id: 0, text: 'item 0', bg: 'blue.400' },
+        { id: 1, text: 'item 1', bg: 'teal.400' },
+        { id: 2, text: 'item 2', bg: 'cyan.400' },
+        { id: 3, text: 'item 3', bg: 'pink.400' },
+        { id: 4, text: 'item 4', bg: 'purple.400' },
+    ]);
+    return (
+        <Stack spacing={16}>
+            <Stack>
+                {items.map((item) => (
+                    <StyledMotionBox key={item.id} w="md" layout bg={item.bg}>
+                        <Heading size="md">{item.text}</Heading>
+                    </StyledMotionBox>
+                ))}
+            </Stack>
+            <Button colorScheme="blue" onClick={() => setItems(shuffle(items))}>
+                Shuffle
+            </Button>
         </Stack>
     );
 };

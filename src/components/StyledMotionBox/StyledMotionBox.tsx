@@ -7,6 +7,10 @@ const StyledMotionBox = (props) => (
         width="100px"
         bg="dodgerblue"
         borderRadius="25px"
+        color="white"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
         {...props}
     ></MotionBox>
 );
