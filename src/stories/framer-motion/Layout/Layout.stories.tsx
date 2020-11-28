@@ -12,7 +12,8 @@ import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 import StyledMotionBox from '../../../components/StyledMotionBox/StyledMotionBox';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import { shuffle } from 'lodash';
+import { shuffle, sample } from 'lodash';
+import { v4 as uuid } from 'uuid';
 
 export default {
     title: 'framer-motion/layout',
@@ -64,8 +65,28 @@ export const flex = () => {
     );
 };
 
-export const grid = () => {
+export const grid = ({ initialNumOfBoxes = 10 }) => {
     const [numOfBoxes, setNumOfBoxes] = useState(10);
+    function generateBox() {
+        return {
+            id: uuid(),
+            bg: sample([
+                'blue.100',
+                'blue.200',
+                'blue.300',
+                'blue.400',
+                'blue.500',
+                'blue.600',
+                'blue.700',
+                'blue.800',
+                'blue.900',
+            ]),
+        };
+    }
+
+    const [boxes, setBoxes] = useState(() =>
+        Array.from({ length: initialNumOfBoxes }, generateBox)
+    );
 
     const item = {
         visible: { opacity: 1, scale: 1 },
@@ -81,9 +102,10 @@ export const grid = () => {
                 w="full"
             >
                 <AnimatePresence>
-                    {new Array(numOfBoxes).fill(null).map((_, i) => (
+                    {boxes.map((box, i) => (
                         <StyledMotionBox
-                            key={i}
+                            key={box.id}
+                            bg={box.bg}
                             initial="hidden"
                             animate="visible"
                             exit="hidden"
@@ -94,16 +116,23 @@ export const grid = () => {
                 </AnimatePresence>
             </Grid>
             <HStack>
-                <Heading size="md">Boxes({numOfBoxes}): </Heading>
+                <Heading size="md">Boxes({boxes.length}): </Heading>
                 <Button
                     onClick={() =>
-                        numOfBoxes > 1 && setNumOfBoxes(numOfBoxes - 1)
+                        boxes.length > 1 &&
+                        setBoxes(boxes.slice(0, boxes.length - 1))
                     }
                 >
                     Remove -
                 </Button>
-                <Button onClick={() => setNumOfBoxes(numOfBoxes + 1)}>
+                <Button onClick={() => setBoxes([...boxes, generateBox()])}>
                     Add +
+                </Button>
+                <Button
+                    colorScheme="blue"
+                    onClick={() => setBoxes(shuffle(boxes))}
+                >
+                    Shuffle
                 </Button>
             </HStack>
         </Stack>
