@@ -141,22 +141,41 @@ export const grid = ({ initialNumOfBoxes = 10 }) => {
 
 export const list = () => {
     const [items, setItems] = useState([
-        { id: 0, text: 'item 0', bg: 'blue.400' },
-        { id: 1, text: 'item 1', bg: 'teal.400' },
-        { id: 2, text: 'item 2', bg: 'cyan.400' },
-        { id: 3, text: 'item 3', bg: 'pink.400' },
-        { id: 4, text: 'item 4', bg: 'purple.400' },
+        { id: 0, text: 'item 0', bg: 'blue.100' },
+        { id: 1, text: 'item 1', bg: 'blue.300' },
+        { id: 2, text: 'item 2', bg: 'blue.500' },
+        { id: 3, text: 'item 3', bg: 'blue.700' },
+        { id: 4, text: 'item 4', bg: 'blue.900' },
     ]);
     return (
         <Stack spacing={16}>
-            <Stack>
-                {items.map((item) => (
-                    <StyledMotionBox key={item.id} w="md" layout bg={item.bg}>
-                        <Heading size="md">{item.text}</Heading>
-                    </StyledMotionBox>
+            <Stack sx={{ perspective: '600px' }} spacing={4}>
+                {items.map((item, i) => (
+                    <StyledMotionBox
+                        layout
+                        animate={{ scale: 0.8 + i * 0.1, rotateX: 15 + 15 * i }}
+                        whileHover={{
+                            rotateX: 0,
+                            scale: 0.9 + i * 0.1,
+                        }}
+                        transition={{
+                            type: 'spring',
+                            mass: 2,
+                            damping: 30,
+                            stiffness: 100,
+                        }}
+                        boxShadow={['xs', 'sm', 'md', 'lg', 'xl'][i]}
+                        key={item.id}
+                        bg={item.bg}
+                        w="md"
+                    ></StyledMotionBox>
                 ))}
             </Stack>
-            <Button colorScheme="blue" onClick={() => setItems(shuffle(items))}>
+            <Button
+                colorScheme="blue"
+                size="lg"
+                onClick={() => setItems(shuffle(items))}
+            >
                 Shuffle
             </Button>
         </Stack>
