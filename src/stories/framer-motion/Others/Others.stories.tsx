@@ -17,3 +17,4 @@ export default {
 
 export const accordion = () => <Accordion />;
 export const tabs = () => <Tabs />;
+export const peopleGrid = () => <PeopleGrid />;
