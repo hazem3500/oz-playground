@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 
 function Tab({ title, color, selectTab, active, id }) {
-    const colorToken = useToken('colors', [color], 'currentColor');
+    const [colorToken] = useToken('colors', [color], 'currentColor');
     return (
         <Box color={color} onClick={() => selectTab(id)} position="relative">
             <Heading>{title}</Heading>
