@@ -1,4 +1,4 @@
-import { Box, Heading, Stack } from '@chakra-ui/core';
+import { Box, Heading, Stack } from '@chakra-ui/react';
 import React, { useRef } from 'react';
 import { animated, useSprings } from 'react-spring';
 import { useDrag } from 'react-use-gesture';

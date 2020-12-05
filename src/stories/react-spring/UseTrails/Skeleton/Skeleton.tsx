@@ -1,4 +1,4 @@
-import { Box, Grid } from '@chakra-ui/core';
+import { Box, Grid } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { animated, useTrail } from 'react-spring';
 

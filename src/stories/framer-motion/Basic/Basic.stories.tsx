@@ -1,4 +1,4 @@
-import { Center, Button, Box, Stack, HStack, Heading } from '@chakra-ui/core';
+import { Center, Button, Box, Stack, HStack, Heading } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 import StyledMotionBox from '../../../components/StyledMotionBox/StyledMotionBox';

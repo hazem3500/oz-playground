@@ -1,4 +1,4 @@
-import { Center, keyframes } from '@chakra-ui/core';
+import { Center, keyframes } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 import ShapeShifter from './ShapeShifter';

@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Text, useToken } from '@chakra-ui/core';
+import { Box, Heading, HStack, Text, useToken } from '@chakra-ui/react';
 import { AnimateSharedLayout } from 'framer-motion';
 import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';

@@ -1,6 +1,7 @@
-import { Center } from '@chakra-ui/core';
+import { Center } from '@chakra-ui/react';
 import React from 'react';
 import Accordion from './Accordion.framer';
+import PeopleGrid from './PeopleGrid.framer';
 import Tabs from './Tabs.framer';
 
 export default {

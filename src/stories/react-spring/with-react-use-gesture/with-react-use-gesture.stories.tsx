@@ -1,4 +1,4 @@
-import { Center, Grid } from '@chakra-ui/core';
+import { Center, Grid } from '@chakra-ui/react';
 import React from 'react';
 import DragBox from './DragBox/DragBox';
 import Parallax from './Parallax/Parallax';

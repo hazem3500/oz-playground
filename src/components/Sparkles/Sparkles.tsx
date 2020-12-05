@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { random, range } from 'lodash';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import { animated, config, useSpring } from 'react-spring';
 import useRandomInterval from '../../hooks/useRandomInterval';
 import usePrefersReducedMotion from '../../hooks/usePrefersReducedMotion';

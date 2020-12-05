@@ -1,4 +1,4 @@
-import { Divider, Heading, Stack, Text } from '@chakra-ui/core';
+import { Divider, Heading, Stack, Text } from '@chakra-ui/react';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import React, { useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';

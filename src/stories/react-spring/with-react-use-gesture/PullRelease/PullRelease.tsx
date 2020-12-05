@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import { animated, to, useSpring } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 

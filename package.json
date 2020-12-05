@@ -3,9 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@chakra-ui/core": "^1.0.0-rc.3",
-        "@emotion/core": "^11.0.0",
+        "@chakra-ui/react": "^1.0.2",
+        "@emotion/react": "^11.1.1",
         "@emotion/styled": "^11.0.0",
+        "@jackfranklin/test-data-bot": "^1.3.0",
         "@react-three/cannon": "^0.5.3",
         "@react-three/drei": "^2.2.7",
         "@testing-library/jest-dom": "^5.11.6",
@@ -16,7 +17,6 @@
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "array-move": "^3.0.1",
-        "emotion-theming": "^11.0.0",
         "framer-motion": "^2.9.5",
         "gsap": "^3.5.1",
         "lodash": "^4.17.20",
@@ -32,9 +32,6 @@
         "three": "^0.123.0",
         "typescript": "~4.1.2",
         "uuid": "^8.3.1"
-    },
-    "resolutions": {
-        "@emotion/core": "^10.0.28"
     },
     "scripts": {
         "start": "npm run storybook",

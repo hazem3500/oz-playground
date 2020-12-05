@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import { animated, useSpring } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 

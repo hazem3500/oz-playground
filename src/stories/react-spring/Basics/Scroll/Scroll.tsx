@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core';
+import { Box, Stack } from '@chakra-ui/react';
 import React, { useEffect, useRef } from 'react';
 import { animated, useSpring, config } from 'react-spring';
 

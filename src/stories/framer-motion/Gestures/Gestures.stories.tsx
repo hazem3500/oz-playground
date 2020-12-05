@@ -7,7 +7,7 @@ import {
     Heading,
     Flex,
     Grid,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useRef, useState } from 'react';
 import MotionBox from '../../../components/MotionBox/MotionBox';
 import StyledMotionBox from '../../../components/StyledMotionBox/StyledMotionBox';

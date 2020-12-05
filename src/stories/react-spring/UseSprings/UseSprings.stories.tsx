@@ -1,4 +1,4 @@
-import { Box, Center } from '@chakra-ui/core';
+import { Box, Center } from '@chakra-ui/react';
 import React from 'react';
 import Boxes from './Boxes/Boxes';
 import Draggable from './Draggable/Draggable';

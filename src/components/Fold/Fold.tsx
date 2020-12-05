@@ -1,8 +1,7 @@
-import React, { useRef, useContext, useCallback } from 'react'
+import React, { useRef, useContext, useCallback } from 'react';
 import styled from '@emotion/styled/macro';
-import {css} from '@emotion/core'
+import { css } from '@emotion/react';
 import { useSpring, animated, interpolate } from 'react-spring';
-
 
 const FoldContext = React.createContext({ content: '', scrollTop: 0 });
 
@@ -19,15 +18,15 @@ const Screen = styled.div`
 `;
 
 const Wrapper = styled.div`
-  position: relative;
-  perspective: 20vw;
-  transform-style: preserve-3d;
-  width: 100%;
+    position: relative;
+    perspective: 20vw;
+    transform-style: preserve-3d;
+    width: 100%;
 `;
 
 const Align = styled.div`
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 `;
 
 const StyledFold = styled.div`
@@ -73,43 +72,39 @@ const StyledFold = styled.div`
 `;
 
 export default function FoldContainer({ content, children }) {
-                   const containerRef = useRef();
-                   const [{ scrollTop }, setScrollTop] = useSpring(() => ({
-                       scrollTop: 0,
-                   }));
-                   const scrollHandler = useCallback(
-                       (e) => {
-                           setScrollTop({ scrollTop: e.target.scrollTop });
-                       },
-                       []
-                   );
+    const containerRef = useRef();
+    const [{ scrollTop }, setScrollTop] = useSpring(() => ({
+        scrollTop: 0,
+    }));
+    const scrollHandler = useCallback((e) => {
+        setScrollTop({ scrollTop: e.target.scrollTop });
+    }, []);
 
-                   return (
-                       <FoldContext.Provider value={{ content, scrollTop }}>
-                           <div style={{ position: 'relative' }}>
-                               <Screen>
-                                   <Wrapper>{children}</Wrapper>
-                               </Screen>
-                               <div
-                                   ref={containerRef}
-                                   style={{
-                                       overflow: 'auto',
-                                       maxHeight: '100vh',
-                                       position: 'relative',
-                                   }}
-                                   onScroll={scrollHandler}
-                               >
-                                   <div style={{ height: '300vh' }}></div>
-                               </div>
-                           </div>
-                       </FoldContext.Provider>
-                   );
-               }
+    return (
+        <FoldContext.Provider value={{ content, scrollTop }}>
+            <div style={{ position: 'relative' }}>
+                <Screen>
+                    <Wrapper>{children}</Wrapper>
+                </Screen>
+                <div
+                    ref={containerRef}
+                    style={{
+                        overflow: 'auto',
+                        maxHeight: '100vh',
+                        position: 'relative',
+                    }}
+                    onScroll={scrollHandler}
+                >
+                    <div style={{ height: '300vh' }}></div>
+                </div>
+            </div>
+        </FoldContext.Provider>
+    );
+}
 
-
-FoldContainer.Fold = function Fold({...props}) {
-    const {content, scrollTop} = useContext(FoldContext)
-    const interContent = scrollTop.interpolate(o => `translateY(-${o}px)`)
+FoldContainer.Fold = function Fold({ ...props }) {
+    const { content, scrollTop } = useContext(FoldContext);
+    const interContent = scrollTop.interpolate((o) => `translateY(-${o}px)`);
     return (
         <StyledFold {...props}>
             <Align>
@@ -119,4 +114,4 @@ FoldContainer.Fold = function Fold({...props}) {
             </Align>
         </StyledFold>
     );
-}
+};

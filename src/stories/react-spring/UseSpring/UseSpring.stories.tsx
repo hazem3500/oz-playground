@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Center, Grid } from '@chakra-ui/core';
+import { Box, Center, Grid } from '@chakra-ui/react';
 import CardFlip from './CardFlip/CardFlip';
 import CardHover from './CardHover/CardHover';
 

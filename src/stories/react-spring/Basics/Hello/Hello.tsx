@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Heading } from '@chakra-ui/core';
+import { Heading } from '@chakra-ui/react';
 
 export default function Hello({ children }) {
     const props = useSpring({

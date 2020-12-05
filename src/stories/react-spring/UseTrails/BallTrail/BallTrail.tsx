@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { useTrail, animated, config } from 'react-spring';
 import { useMove } from 'react-use-gesture';
